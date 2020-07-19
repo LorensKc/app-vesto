@@ -1,0 +1,212 @@
+.live {
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        @include mediaDesktop($w768) {
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+        }
+    }
+
+    &__header-square {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 67px;
+        height: 66px;
+        margin: 0 0 15px;
+        background-color: $blue;
+        border-radius: 3px;
+        @include mediaDesktop($w768) {
+            margin: 0 0 0 15px;
+        }
+
+        p {
+            color: $white;
+            font-weight: $bold;
+            font-size: 21px;
+        }
+    }
+
+    &__header-content {
+        text-align: right;
+        color: $d-gray;
+    }
+
+    &__header-title {
+        color: $black;
+        font-size: 24px;
+        font-weight: $medium;
+        margin-bottom: 5px;
+    }
+
+    &__header-date {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    &__header-subtitle {
+        font-size: 18px;
+    }
+
+    &__main-content {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        height: 600px;
+        margin-bottom: 16px;
+        @include mediaDesktop($w768) {
+            flex-flow: row nowrap;
+            height: 450px;
+        }
+        
+    }
+
+    &__main-chat {
+        width: 100%;
+        height: 100%;
+        max-height: 250px;
+        background-color: $white;
+        @include mediaDesktop($w768) {
+            width: 35%;
+            max-height: 100%;
+        }
+        @include mediaDesktop($w1024) {
+            width: 27%;
+        }
+    }
+
+    &__video-block {
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        position: relative;
+        @include mediaDesktop($w768) {
+            width: 65%;
+        }
+        @include mediaDesktop($w1024) {
+            width: 73%;
+        }
+    }
+    
+    &__connect-btn {
+        width: 100%;
+        padding: 7px 0;
+        color: $white;
+        font-size: 18px;
+        text-align: center;
+        background-color: $l-blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__share-block {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        @include mediaDesktop($w768) {
+            flex-flow: row nowrap;
+            padding: 0 12px;
+        }
+    }
+
+    &__share-links-wrapper {}
+
+    &__share-list, &__advantage-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+        @include mediaDesktop($w768) {
+            margin-bottom: 0;
+            width: auto;
+        }
+    }
+
+    &__advantage-nav {
+        justify-content: center;
+        margin: 0;
+    }
+
+    &__share-link {
+        display: inline-block;
+        line-height: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include mediaDesktop($w768) {
+            margin-right: 19px;
+        }
+
+        .icon {
+            width: 35px;
+            height: 35px;
+
+            &__share {
+                width: 31px;
+                height: 31px;
+                background-image: url('../images/icons/share.png');
+            }
+            &__whatsap {
+                background-image: url('../images/icons/whatsap.png');
+            }
+            &__facebook {
+                background-image: url('../images/icons/facebook.png');
+            }
+            &__messanger {
+                width: 34px;
+                background-image: url('../images/icons/messanger.png');
+            }
+            &__telegram {
+                width: 34px;
+                background-image: url('../images/icons/telegram.png');
+            }
+            &__gmail {
+                width: 36px;
+                height: 27px;
+                background-image: url('../images/icons/gmail.png');
+            }
+        }
+
+    }
+
+    &__advantage-nav {
+        button {
+            line-height: 0;
+        }
+
+        .icon {
+            height: 30px;
+
+            &__chat {
+                width: 34px;
+                background-image: url("../images/icons/chat.png");
+            }
+            &__star {
+                width: 31px;
+                background-image: url("../images/icons/star.png");
+            }
+
+        }
+    }
+
+    &__open-chat {
+        margin-right: 20px;
+    }
+}

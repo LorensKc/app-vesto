@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+  background: black;
+  color: $gray;
+  font-size: 12px;
+
+  @include mediaDesktop($w768) {
+    padding: 10px 35px;
+    font-size: 16px;
+  }
+
+  //top part of header
+  &__left, &__right{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    transition: .25s;
+  }
+
+  &__right {
+    flex-flow: row-reverse nowrap;
+
+    .header__comp-logo {
+      padding: 0 0 0 10px;
+      @include mediaDesktop($w768) {
+        padding: 0 0 0 16px;
+      }
+
+      &:after {
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+
+  &__comp-logo {
+    padding: 0 10px 0 0;
+    position: relative;
+    max-width: 65px;
+    @include mediaDesktop($w768) {
+      padding: 0 15px 0 0;
+      max-width: 100%;
+    }
+
+    &:after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background-color: $gray;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &__left-sign {
+    padding-left: 10px;
+    @include mediaDesktop($w768) {
+      padding-left: 16px;
+    }
+  }
+  
+  &__right-sign {
+    text-align: right;
+    padding-right: 10px;
+    @include mediaDesktop($w768) {
+      padding-right: 16px;
+    }
+  }
+
+}

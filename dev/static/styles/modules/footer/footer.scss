@@ -1,0 +1,21 @@
+.footer {
+  flex: 0 0 auto;
+  
+  // Copyright container
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: $gray;
+    @include mediaDesktop($w1024) {
+      padding: 16px 10px;
+    }
+  }
+
+  &__copyright-text {
+    font-size: 14px;
+    color: $black;
+  }
+}

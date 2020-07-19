@@ -1,0 +1,82 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$gray: #808080;
+$blue: #0071BC;
+
+$l-gray: #cccccc;
+$l-blue: #3FA9F5;
+
+$d-gray: #333333;
+
+// Sizes
+$base-font-size: 16px;
+
+// Font-weights
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black-bold: 900;
+
+// Стили для задания font-weight по классу любому эллементу
+.thin {
+  font-weight: $thin;
+}
+.extra-light {
+  font-weight: $extra-light;
+}
+.light {
+  font-weight: $light;
+}
+.regular {
+  font-weight: $regular;
+}
+.medium {
+  font-weight: $medium ;
+}
+.semi-bold {
+  font-weight: $semi-bold;
+}
+.bold {
+  font-weight: $bold ;
+}
+.extra-bold {
+  font-weight: $extra-bold;
+}
+.black-bold {
+  font-weight: $black-bold;
+}
+
+$content-size: 1024px;
+
+$w1280: 1280px;
+$w1200: 1200px;
+$w1024: 1024px;
+
+$w768: 768px;
+$w320: 320px;
+
+@mixin mediaDesktop($width) {
+  @media only screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin mediaDesktopTablet($width1, $width2) {
+  @media only screen and (min-width: #{$width1}) and (max-width: #{$width2}) {
+    @content;
+  }
+}
+
+@mixin mediaMobileHorizontal($width, $height) {
+  @media only screen and (max-width: #{$width}) and (max-height: #{$height}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Fonts

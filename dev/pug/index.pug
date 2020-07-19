@@ -1,0 +1,57 @@
+extends template/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	.live__wrapper
+		.live__header
+			.live__header-square
+				p שידור
+				p חוזר 
+			.live__header-content
+				.live__header-title
+					p קדושים תהיו' | שיחה בענייני הפרשה ביידיש
+				.live__header-date
+					p י”ד אייר תש”פ | 7.5.2020 | 16:30
+				.live__header-subtitle
+					p מאת ראש הישיבה מגור הגאון הרב שאול אלתר שליט"א | פרשת אחרי – קדושים תש"פ
+			
+		.live__main-content
+			.live__main-chat
+			.live__video-block
+				.live__main-video
+				button.live__connect-btn
+					span שידורנו מתחיל עוד 40 דק’
+
+		.live__share-block
+			ul.live__share-list
+				li.live__share-link
+					a(href="")
+						i.icon.icon__share
+				li.live__share-link
+					a(href="https://www.whatsapp.com/?lang=ru" target="_blank")
+						i.icon.icon__whatsap
+				li.live__share-link
+					a(href="https://www.facebook.com/" target="_blank")
+						i.icon.icon__facebook
+				li.live__share-link
+					a(href="https://www.messenger.com/" target="_blank")
+						i.icon.icon__messanger
+				li.live__share-link
+					a(href="https://web.telegram.org/" target="_blank")
+						i.icon.icon__telegram
+				li.live__share-link
+					a(href="https://www.gmail.com/" target="_blank")
+						i.icon.icon__gmail 
+			.live__advantage-nav
+				button.live__open-chat
+					i.icon.icon__chat
+				button.live__add-favourite
+					i.icon.icon__star
+
+
+
+
+
